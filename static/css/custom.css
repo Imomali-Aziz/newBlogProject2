@@ -139,6 +139,7 @@ a.custom-nav-link:hover::after {
     color: var(--light);
     border-color: var(--lgreen);
     border-radius: 0;
+    margin-bottom: .3rem;
 }
 .custom-form .container form div textarea {
     height: calc(10rem + 18px);
@@ -180,10 +181,11 @@ a.custom-nav-link:hover::after {
 }
 .custom-form .container form div label {
     color: var(--light);
-    margin-bottom: 0.1rem;
+    margin-bottom: 0.2rem;
 }
+.custom-form .container form div small.form-text.text-muted,
 .custom-form .container form div small.form-text.text-muted ul li {
-    color: var(--light);
+    color: var(--light) !important;
     opacity: 0.8;
 }
 .custom-form .container form div input:focus,
