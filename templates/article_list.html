@@ -1,0 +1,34 @@
+{% extends 'base.html' %} 
+{% block content %} 
+    <!-- Main -->
+    <section class="articles pt-5 mt-4">
+        <div class="container ps-0">
+            <div class="row gx-4 gy-4 py-3">
+                {% for article in object_list %}
+                <div class="col-6 post">
+                    {% if article.photo %}
+                    <div class="post-img post-img-1 p-1">
+                        <div>
+                            <img src='{{ article.photo.url }}' class="img-fluid border border-1 p-1">
+                        </div>
+                    </div>
+                    {% endif %}
+                    <h2>
+                        <a href="{% url 'article_detail' article.pk %}" class="post-link custom-link">{{ article.title }}</a>
+                    </h2>
+                    <p>
+                        {% if article.summary %}
+                            {{ article.summary }}...
+                        {% else %}
+                            {{ article.body | slice:"100" | safe }}...
+                        {% endif %}
+                    </p>
+                    <small>muallif: {{ article.author | title }} &middot; {{ article.date }}</small>
+                    <hr />
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <!-- /Main -->
+{% endblock content %}

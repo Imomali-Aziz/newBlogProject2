@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!-- Single post -->
+    <section class="article pt-5 pb-3 mt-4">
+        <div class="container px-lg-5">
+        <div class="row gx-4 gy-4 py-3 mx-lg-5 px-lg-5 mx-0">
+            <div class="col single-post">
+                {% if article.photo %}
+                <div class="post-img post-img-1 mb-2">
+                    <div>
+                        <img src='{{ article.photo.url }}' class="img-fluid w-100 border border-1 p-2 d-inline-block">
+                    </div>
+                </div>
+                {% endif %}
+                <h2>
+                    {{ article.title }}
+                </h2>
+                <p>{{ article.body|safe }}</p>
+                <h4>Muallif: {{ article.author }}</h4>
+                <div class="fs-5 mb-2">
+                    <a href="{% url 'article_edit' article.pk %}" class='post-link custom-link'>Tahrirlash</a> |
+                    <a href="{% url 'article_delete' article.pk %}" class='post-link custom-link'>O'chirish</a>
+                </div>
+                <small>{{ article.date }}</small>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- /Single post -->
+{% endblock content %}

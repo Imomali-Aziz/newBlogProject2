@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <!-- Delete post -->
+    <section class="custom-form pt-5">
+        <div class="container py-5 px-lg-5">
+        <form method='POST' class='mx-lg-5 px-lg-5'>{% csrf_token %}
+            <h2 class='mb-4'>{{ article.title }}</h2>
+            <p class="fs-4 mb-4">Haqiqatdan ham "Qiziqarli blog yuritish" nomli postni o'chirmoqchimisiz?</p>
+            <div class="submit-part">
+            <button class="hover-btn hover-btn-1 hover-filled-slide-left">
+                <span>O'chirish</span>
+            </button>
+            <a href="{% url 'article_detail' article.pk %}" class="mx-2 mx-lg-4 mx-md-2 my-1 d-inline-block custom-link fs-5">Bekor qilish</a>
+            </div>
+        </form>
+        </div>
+    </section>
+    <!-- /Delete post -->
+{% endblock content %}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}Kirish{% endblock title %}
+
+{% block content %}
+    <!-- Login -->
+    <section class="custom-form pt-5">
+        <div class="container py-5 px-lg-5">
+            <form method='POST' class='mx-lg-5 px-lg-5'>{% csrf_token %}
+                <h2 class='mb-4'>Saytga kirish</h2>
+                {{ form|crispy }}
+
+                {% comment %} <div class="form-floating mb-4">
+                    <input type="text" class="form-control rounded-0" id="post-title" placeholder="Foydalanuvchi nomi">
+                    <label for="post-title">Username</label>  
+                </div>
+                <div class="form-floating mb-4">
+                    <input type="text" class="form-control rounded-0" id="post-summary" placeholder="Kalit so'z">
+                    <label for="post-summary">Kalit so'z</label>
+                </div> {% endcomment %}
+
+                <div class="submit-part mt-4">
+                    <button class="hover-btn hover-btn-1 hover-filled-slide-left">
+                        <span>Kirish</span>
+                    </button>
+                    <a href="{% url 'signup' %}" class="mx-2 mx-lg-4 mx-md-2 my-1 d-inline-block custom-link fs-5">Ro'yxatdan o'tish</a>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- /Login -->
+{% endblock content %}

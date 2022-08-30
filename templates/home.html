@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <!-- Hero -->
+  <section class="hero py-5 my-4">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-md-5 row justify-content-center ms-1 ms-md-0">
+          <div class="text-lg-center col-xl-6 col-lg-7 col-md-9 col-6">
+            <img src="{% static 'assets/img/me.jpg' %}" class="img-fluid" alt="Ko'zoynak taqqan odam qorong'ida turibdi.">
+          </div>
+        </div>
+        <div class="col-md-7 text-md-start text-center">
+          <h1 class="hero__header">Imomali Azizov</h1>
+          <p>Kopirayter, matematik, dasturchi, o'qituvchi blogi.</p>
+          <div class="social-media d-flex flex-row justify-content-md-start justify-content-center">
+            <a href="https://www.github.com/Imomali-Aziz" target="_blank" class="btn-outline-social btn btn-lg rounded-0 fs-3 d-inline-block p-2 me-3">
+              <i class="bi bi-github"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100058474186692" target="_blank" class="btn-outline-social btn btn-lg rounded-0 fs-3 d-inline-block p-2 me-3">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/imomali_azizov/" target="_blank" class="btn-outline-social btn btn-lg rounded-0 fs-3 d-inline-block p-2 me-3">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="https://www.twitter.com/Imomali-Aziz" target="_blank" class="btn-outline-social btn btn-lg rounded-0 fs-3 d-inline-block p-2">
+              <i class="bi bi-twitter"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Hero -->
+{% endblock content %}

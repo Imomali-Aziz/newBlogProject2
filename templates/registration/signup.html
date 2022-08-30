@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}Ro'yxatdan o'tish{% endblock title %}
+
+{% block content %}
+    <!-- Signup -->
+    <section class="custom-form pt-5">
+    <div class="container py-5 px-lg-5">
+      <form method="POST" class="mx-lg-5 px-lg-5">{% csrf_token %}
+        <h2 class="mb-3">Ro'yxatdan o'tish</h2>
+        {{ form|crispy }}
+
+        {% comment %} <div class="form-floating mb-1">
+          <input type="text" class="form-control rounded-0" id="username" placeholder="Foydalanuvchi nomi" />
+          <label for="username">Foydalanuvchi nomi</label>
+        </div>
+        <p class="opacity-50 mb-3">
+          Required. 150 characters or fewer. Letters, digits and @/./+/-/_
+          only.
+        </p>
+        <div class="form-floating mb-4">
+          <input type="text" class="form-control rounded-0" id="firstname" placeholder="Ismingiz" />
+          <label for="firstname">Ismingiz</label>
+        </div>
+        <div class="form-floating mb-4">
+          <input type="text" class="form-control rounded-0" id="lastname" placeholder="Familiyangiz" />
+          <label for="lastname">Familiyangiz</label>
+        </div>
+        <div class="form-floating mb-4">
+          <input type="email" class="form-control rounded-0" id="user-mail" placeholder="Elektron pochta" />
+          <label for="user-mail">Elektron pochta</label>
+        </div>
+        <div class="form-floating mb-4">
+          <input type="number" class="form-control rounded-0" id="user-age" placeholder="Yoshingiz" />
+          <label for="user-age">Yoshingiz</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="password" class="form-control rounded-0" id="password" placeholder="Kalit so'z" />
+          <label for="password">Kalit so'z*</label>
+        </div>
+        <ul class="mb-3 opacity-75">
+          <li>
+            Kalit so'zingiz shaxsiy ma'lumotlaringizga o'xshamasligi kerak.
+          </li>
+          <li>Kalit so'zingiz 8 ta belgidan kam bo'lmasin.</li>
+          <li>Juda ko'p foydalaniladigan kalit so'zlardan foydalanmang.</li>
+          <li>
+            Kalit so'zingiz faqatgina raqamlardan tashkil topmasligi kerak.
+          </li>
+        </ul>
+        <div class="form-floating mb-4">
+          <input type="password" class="form-control rounded-0" id="confirm-password"
+            placeholder="Kalit so'zni tasdiqlash" />
+          <label for="confirm-password">Kalit so'zni tasdiqlash*</label>
+        </div> {% endcomment %}
+        <div class="submit-part mt-3">
+          <button class="hover-btn hover-btn-1 hover-filled-slide-left">
+            <span>Yuborish</span>
+          </button>
+        </div>
+      </form>
+    </div>
+    </section>
+  <!-- /Signup -->
+{% endblock content %}

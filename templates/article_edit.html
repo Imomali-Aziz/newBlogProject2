@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <!-- Edit post -->
+    <section class="custom-form pt-5">
+        <div class="container py-5 px-lg-5">
+            <form method='POST' enctype="multipart/form-data" class='mx-lg-5 px-lg-5'>{% csrf_token %}
+                <h2 class='mb-3'>Postni tahrirlash</h2>
+
+                {% comment %} <div class="form-floating mb-4">
+                <input type="text" class="form-control rounded-0" id="post-title" placeholder="Post sarlavhasi">
+                <label for="post-title">Sarlavha</label>  
+                </div>
+                <div class="form-floating mb-4">
+                <input type="text" class="form-control rounded-0" id="post-summary" placeholder="Qisqacha mazmuni">
+                <label for="post-summary">Qisqa matn</label>
+                </div>
+                <div class="form-floating mb-4">
+                <textarea class="form-control rounded-0" placeholder="Post matnini shu yerga yozing" id="post-text"></textarea>
+                <label for="post-text">Post matni</label>
+                </div>
+                <div class="mb-4">
+                <label class="mb-1" for="post-file">Post uchun rasm</label>
+                <input type="file" class="form-control rounded-0" id="post-file">
+                </div> {% endcomment %}
+                
+                {{ form.media }}
+                {{ form|crispy }}
+                
+                <div class="submit-part">
+                    <button class="hover-btn hover-btn-1 hover-filled-slide-left">
+                        <span>Yangilash</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- /Edit post -->
+{% endblock content %}
