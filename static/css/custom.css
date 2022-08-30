@@ -177,10 +177,14 @@ a.custom-nav-link:hover::after {
   border-inline-end-width: 1px;
   border-radius: 0;
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-s}
+}
 .custom-form .container form div label {
     color: var(--light);
     margin-bottom: 0.1rem;
+}
+.custom-form .container form div small.form-text.text-muted ul li {
+    color: var(--light);
+    opacity: 0.8;
 }
 .custom-form .container form div input:focus,
 .custom-form .container form div textarea:focus {
