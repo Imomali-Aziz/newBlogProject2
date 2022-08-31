@@ -10,9 +10,11 @@
                 <div class="col-lg-6 col-12 post">
                     {% if article.photo %}
                     <div class="post-img post-img-1 p-1">
-                        <div>
-                            <img src='{{ article.photo.url }}' class="img-fluid border border-1 p-1">
-                        </div>
+                        <a href="{% url 'article_detail' article.pk %}">
+                            <div>
+                                <img src='{{ article.photo.url }}' class="img-fluid border border-1 p-1">
+                            </div>
+                        </a>
                     </div>
                     {% endif %}
                     <h2>
