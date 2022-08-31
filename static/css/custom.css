@@ -143,6 +143,7 @@ a.custom-nav-link:hover::after {
 }
 .custom-form .container form div textarea {
     height: calc(10rem + 18px);
+    width: 100%;
 }
 .custom-form .container form div input.form-control-file {
     display: block;
@@ -201,8 +202,9 @@ a.custom-nav-link:hover::after {
     background: #078C03D1;
 }
 
-/* Custom edited form */
-.custom-form .container form div label {
+/* Django Ckeditor Custom */
+.django-ckeditor-widget, .cke_1.cke.cke_reset.cke_chrome.cke_editor_id_body.cke_ltr.cke_browser_gecko.cke_browser_quirks {
+    width: 100% !important;
 }
 
 

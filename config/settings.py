@@ -153,10 +153,28 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = str(BASE_DIR.joinpath('media'))
 
 # CKEDITOR CONFIGS
+# CKEDITOR_CONFIGS = {
+#     'default': {
+#         'toolbar': 'Custom',
+#         'toolbar_Custom': [
+#             ['Bold', 'Italic', 'Underline'],
+#             ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-'],
+#             ['Link', 'Unlink'],
+#             ['RemoveFormat']
+#         ]
+#     }
+# }
+
 CKEDITOR_CONFIGS = {
     'default': {
-        'toolbar': 'Full',
-    },
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-'],
+            ['Link', 'Unlink'],
+            ['RemoveFormat']
+        ],
+    }
 }
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
