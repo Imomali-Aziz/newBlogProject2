@@ -7,7 +7,7 @@
     <section class="article pt-5 pb-3 mt-4">
         <div class="container px-lg-5">
         <div class="row gx-4 gy-4 py-3 mx-lg-5 px-lg-5 mx-0">
-            <div class="col single-post">
+            <div class="col single-post fs-5">
                 {% if article.photo %}
                 <div class="post-img post-img-1 mb-2">
                     <div>
@@ -18,7 +18,7 @@
                 <h2>
                     {{ article.title }}
                 </h2>
-                <p>{{ article.body|safe }}</p>
+                <p class='text-white'>{{ article.body|safe }}</p>
                 <h4>Muallif: {{ article.author }}</h4>
                 <div class="fs-5 mb-2">
                     <a href="{% url 'article_edit' article.pk %}" class='post-link custom-link'>Tahrirlash</a> |

@@ -147,7 +147,7 @@ a.custom-nav-link:hover::after {
 .custom-form .container form div input.form-control-file {
     display: block;
     width: 100%;
-    font-size: 1rem;
+    font-size: .9em;
     font-weight: 400;
     line-height: 1.5;
     color: var(--light);
@@ -165,7 +165,7 @@ a.custom-nav-link:hover::after {
 .custom-form .container form div input.form-control-file::file-selector-button {
   background-color: var(--green);
   color: var(--light);
-  font-size: 1.2rem;
+  font-size: 1em;
   font-weight: 300;
   padding: .75rem 1.25rem;
   margin: -.375rem -.75rem;
