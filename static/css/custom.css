@@ -27,7 +27,7 @@ body {
 }
 .navbar .container .offcanvas .offcanvas-header .btn-close {
     filter: invert();
-    padding: 14px;
+    padding: .875rem;
     border-radius: 0;
 }
 .navbar .container .offcanvas .offcanvas-header .btn-close:focus {
@@ -128,7 +128,7 @@ a.custom-nav-link:hover::after {
 
 /* Custom form */
 .custom-form .container {
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 .custom-form .container form .form-group {
     margin-bottom: 0.75rem;
@@ -254,14 +254,14 @@ a.custom-link:hover::after {
 .hover-btn span {
   position: relative;
   display: inline-block;
-  font-size: 20px;
+  font-size: 1.25rem;
   /*font-weight: 500;*/
   /*letter-spacing: 2px;*/
   /*text-transform: uppercase;*/
   top: 0;
   left: 0;
   width: 100%;
-  padding: 10px 18px;
+  padding: .625rem 1.125rem;
   line-height: 24px;
   transition: 0.3s;
 }
