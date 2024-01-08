@@ -22,7 +22,7 @@
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-dark navbar-expand-lg p-0 fixed-top">
-    <div class="container p-0 mx-sm-auto mx-2 me-3">
+    <div class="container p-0 mx-sm-auto mx-5 me-3">
       <a class="navbar-brand fs-3 px-lg-0 px-md-2 px-3 py-2 me-auto" href="{% url 'home' %}">Azizov blogi</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle button">
         <span class="navbar-toggler-icon"></span>
@@ -46,6 +46,15 @@
             </li>
             <li class="nav-item mx-lg-4 mx-2 pb-lg-2 pb-3">
               <a class="custom-nav-link nav-link px-0 d-inline-block" href="{% url 'password_change' %}">Yangi parol</a>
+            </li>
+            <li class="nav-item mx-lg-4 mx-2 pb-lg-2 pb-3">
+              <a class="custom-nav-link nav-link px-0 d-inline-block" href="{% url 'profile' %}">
+                {% if user.first_name %}
+                  {{ user.first_name }}
+                {% else %}
+                  {{ user.username }}
+                {% endif %}
+              </a>
             </li>
             <li class="nav-item">
               <a class="hover-btn hover-btn-1 hover-filled-slide-left d-inline-block text-center" href="{% url 'logout' %}">

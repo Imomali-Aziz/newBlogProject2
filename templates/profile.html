@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}{{ user.username }}{% endblock title %}
+
+{% block content %}
+
+    <section class="profile pt-5 pb-3 mt-4">
+        <div class="container px-lg-5">
+            <div class="row gx-4 gy-4 py-3 mx-lg-5 px-lg-5 mx-0">
+                <div class="col fs-5">
+                    <h3 class='mb-3'>Assalomu alaykum, {% if user.first_name %} {{ user.first_name | title }} {% else %} {{ user.username }} {% endif %}</h3>
+
+                    <p>
+                        <span class="fs-4">Username:</span> {{ user.username }}
+                    </p>
+                    <p>
+                        <span class="fs-4">Ism:</span> {% if user.first_name %} {{ user.first_name | title }} {% else %} noma'lum {% endif %}
+                    </p>
+                    <p>
+                        <span class="fs-4">Familiya:</span> 
+                        {% if user.last_name %} {{ user.last_name | title }} {% else %} noma'lum {% endif %}
+                    </p>
+                    <p>
+                        <span class="fs-4">Email:</span> {% if user.email %} {{ user.email }} {% else %} noma'lum {% endif %}
+                        </p>
+                    <p>
+                        <span class="fs-4">Yosh:</span> {% if user.age %} {{ user.age }} {% else %} noma'lum {% endif %}
+                    </p>
+                    <p>
+                        <a href="{% url 'password_change' %}" class='post-link custom-link'>Parolni o'zgartirish</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+{% endblock content %}

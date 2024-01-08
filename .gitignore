@@ -1,5 +1,6 @@
 .env
 __pychache__/
 .vscode
+.idea
 dbsqlite3
 db.sqlite3
